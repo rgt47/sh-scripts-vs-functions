@@ -867,6 +867,6 @@ This post is part of the *Shell Scripting and Git Tooling* series.
 Recommended reading order:
 
 1. **Post 41: Refactoring a Personal Toolbox: Scripts versus Shell Functions** (this post)
-2. Post 42: [zzgit: An interactive staging and commit wizard for zsh](../42-zzgitsetup/)
-3. Post 43: [A Mac Workflow for Tracking Daily Research Progress](../43-researchmanagement/)
+2. Post 42: [zzgit: An interactive staging and commit wizard for zsh](../42-sh-zzgit-commit-wizard/)
+3. Post 43: [A Mac Workflow for Tracking Daily Research Progress](../43-sh-daily-research-log/)
 
