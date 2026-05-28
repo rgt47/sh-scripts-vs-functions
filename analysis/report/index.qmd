@@ -35,6 +35,8 @@ format:
     monofont: 'DejaVu Sans Mono'
     code-overflow: wrap
     code-block-bg: true
+cluster: shell-and-git
+cluster-order: 1
 ---
 
 ![A workshop pegboard, organised so that each tool sits in its own
@@ -858,3 +860,13 @@ Corrections, suggestions, and questions are welcome. Please open
 an issue or pull request on the
 [GitHub repository](https://github.com/mygit) or send an email
 to user@example.com.
+
+## Related posts in this cluster
+
+This post is part of the *Shell Scripting and Git Tooling* series.
+Recommended reading order:
+
+1. **Post 41: Refactoring a Personal Toolbox: Scripts versus Shell Functions** (this post)
+2. Post 42: [zzgit: An interactive staging and commit wizard for zsh](../42-zzgitsetup/)
+3. Post 43: [A Mac Workflow for Tracking Daily Research Progress](../43-researchmanagement/)
+
