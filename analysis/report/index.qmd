@@ -1,19 +1,21 @@
 ---
 title: 'Refactoring a Personal Toolbox: Scripts versus Shell Functions'
-author: "Ronald 'Ryy' G. Thomas"
+author: Ronald 'Ryy' G. Thomas
 date: '2026-04-25'
-categories: [shell]
-description: >
-  Personal toolboxes accumulate helpers across years of small fixes:
-  some end up as shell functions in '.zshrc', some as scripts in
-  '~/bin', often with no consistent rule for which goes where. A
-  principled split (function only when shell state must change,
-  versioned script otherwise) removes hundreds of lines of logic
-  from the average dotfile, makes every helper shellcheck-able,
-  and reduces shell startup time.
-image: 'media/images/hero.png'
-document-type: 'blog'
-draft: true
+categories:
+- shell
+- shell-and-git
+description: 'Personal toolboxes accumulate helpers across years of small fixes: some
+  end up as shell functions in ''.zshrc'', some as scripts in ''~/bin'', often with
+  no consistent rule for which goes where. A principled split (function only when
+  shell state must change, versioned script otherwise) removes hundreds of lines of
+  logic from the average dotfile, makes every helper shellcheck-able, and reduces
+  shell startup time.
+
+  '
+image: media/images/hero.png
+document-type: blog
+draft: false
 execute:
   echo: true
   warning: false
@@ -31,8 +33,8 @@ format:
     colorlinks: true
     papersize: letter
     geometry:
-      - margin=1in
-    monofont: 'DejaVu Sans Mono'
+    - margin=1in
+    monofont: DejaVu Sans Mono
     code-overflow: wrap
     code-block-bg: true
 cluster: shell-and-git
