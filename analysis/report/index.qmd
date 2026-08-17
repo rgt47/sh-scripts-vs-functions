@@ -1,6 +1,6 @@
 ---
 title: 'Refactoring a Personal Toolbox: Scripts versus Shell Functions'
-author: Ronald G. Thomas
+author: "Ronald G. Thomas"
 date: '2026-04-25'
 categories:
 - shell
@@ -21,22 +21,12 @@ execute:
   warning: false
   message: false
 format:
-  html:
-    code-fold: false
-    code-tools: false
-    reference-location: margin
   pdf:
     pdf-engine: xelatex
-    documentclass: scrartcl
+    monofont: 'DejaVu Sans Mono'
+    geometry: margin=1in
+    fontsize: 11pt
     toc: false
-    number-sections: true
-    colorlinks: true
-    papersize: letter
-    geometry:
-    - margin=1in
-    monofont: DejaVu Sans Mono
-    code-overflow: wrap
-    code-block-bg: true
 cluster: shell-and-git
 cluster-order: 1
 ---
