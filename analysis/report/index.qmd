@@ -78,8 +78,8 @@ phase sequence and effort estimates, is referenced under
 4. Document the gotchas that only surface when scripts are extracted
    out of a long-lived shell environment.
 
-Errors and better approaches are welcome; see the Feedback section
-at the end.
+Errors and better approaches are welcome; see the Let's Connect
+section at the end.
 
 ![A second monitor displaying terminal panes during an active
 refactor session.](media/images/ambiance1.png){.img-fluid height=3.5in}
@@ -786,13 +786,11 @@ re-accumulating.
 
 **Related posts:**
 
-- [Setting up dotfiles on
-  GitHub](https://focusonr.org/posts/setupdotfilesongithub/):
+- [Multi-Laptop macOS Bootstrap](../wf-multi-laptop-dotfiles-bootstrap/):
   versioning the shell startup file alongside the rest of the
   configuration.
-- [A research backup
-  system](https://focusonr.org/posts/researchbackupsystem/): a
-  worked example of a helper that belongs as a script invoked
+- [Research Backup Architecture](../sec-three-tier-backup-architecture/):
+  a worked example of a helper that belongs as a script invoked
   from a scheduler, not as a function in a shell.
 
 **Key resources:**
@@ -830,12 +828,16 @@ re-accumulating.
 
 ---
 
-# Feedback
+# Let's Connect
 
-Corrections, suggestions, and questions are welcome. Please open
-an issue or pull request on the
-[GitHub repository](https://github.com/mygit) or send an email
-to user@example.com.
+- **GitHub:** [rgt47](https://github.com/rgt47)
+- **Twitter/X:** [@rgt47](https://twitter.com/rgt47)
+- **LinkedIn:**
+  [Ronald Glenn Thomas](https://linkedin.com/in/rgthomaslab)
+- **Email:**
+  [rgtlab.org/contact](https://rgtlab.org/contact)
+
+Corrections, suggestions, and questions are welcome.
 
 ## Related posts in this cluster
 
