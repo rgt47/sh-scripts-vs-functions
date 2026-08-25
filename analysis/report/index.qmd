@@ -845,5 +845,5 @@ This post is part of the *Shell Scripting and Git Tooling* series.
 Recommended reading order:
 
 1. **Post 41: Refactoring a Personal Toolbox: Scripts versus Shell Functions** (this post)
-2. Post 43: [A Mac Workflow for Tracking Daily Research Progress](../43-sh-daily-research-log/)
+2. Post 43: [A Mac Workflow for Tracking Daily Research Progress](../sh-daily-research-log/)
 
