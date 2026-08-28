@@ -15,7 +15,7 @@ cluster: shell-and-git
 cluster-order: 1
 ---
 
-![A workshop pegboard, organised so that each tool sits in its own
+![A workshop pegboard, organized so that each tool sits in its own
 labelled outline.](media/images/hero.png){.img-fluid width=80% fig-align="center"}
 
 *A personal toolbox earns its keep when each helper sits in the place
@@ -50,7 +50,7 @@ worked example is drawn from a biostatistician's workflow
 frequent `git` commits, occasional HPC submission), but the
 underlying rule applies to any Unix-flavoured personal workspace.
 
-A companion plan that operationalises the rule, with a concrete
+A companion plan that operationalizes the rule, with a concrete
 phase sequence and effort estimates, is referenced under
 [See Also](#see-also).
 
@@ -63,7 +63,7 @@ phase sequence and effort estimates, is referenced under
 - To bring versioned scripts under a linter (`shellcheck`) so that
   legacy quoting bugs surface before they bite.
 - To eliminate microscripts that exist purely because the author did
-  not realise the shell already has a primitive for them (the alias).
+  not realize the shell already has a primitive for them (the alias).
 - To make the toolbox legible to future-self and to collaborators
   who inherit it during onboarding or Sabbatical handoff.
 
@@ -71,7 +71,7 @@ phase sequence and effort estimates, is referenced under
 
 1. State a guiding principle that resolves the function-versus-script
    question in every encountered case.
-2. Provide a categorisation matrix so that an existing toolbox can be
+2. Provide a categorization matrix so that an existing toolbox can be
    triaged in a single sitting.
 3. Sequence the refactor into seven small phases, each independently
    shippable and reversible.
@@ -147,7 +147,7 @@ sense.
 on the same inputs in the same environment yields the same
 outputs. Reproducibility requires both that the code be
 captured (version control, an executable file at a stable
-location) and that the execution environment be characterised
+location) and that the execution environment be characterized
 (declared dependencies, pinned versions, an explicit shebang).
 A helper defined inline in a personal startup file fails the
 first requirement; a script in `~/bin` under `git` satisfies
@@ -319,7 +319,7 @@ even though `.Rprofile` is technically capable of running it.
 The pipeline does not require access to the interactive session's
 namespace, and locating it there would slow every R session,
 obscure it from version control review, and prevent any tooling
-from analysing it as a self-contained unit.
+from analyzing it as a self-contained unit.
 
 The shell case is the same boundary at a different scale. A
 shell function corresponds to a function loaded into the user's
@@ -415,7 +415,7 @@ and `.zshrc` was already in the editor. The forces driving each
 inversion are completely different, but the symptom (a toolbox
 where category does not predict location) is identical.
 
-Recognising both forces matters because the corrective for each is
+Recognizing both forces matters because the corrective for each is
 different. The microscript that should have been an alias becomes
 an alias and disappears. The accumulated function that should have
 been a script becomes a script and gets the full hardening
@@ -428,7 +428,7 @@ history.
 For completeness, the rule does sometimes route a current script
 *into* the function form. A helper that the author scripted but
 that genuinely needs to leave the user in a different directory is
-mis-categorised as a script. The give-away symptom: 'why does my
+mis-categorized as a script. The give-away symptom: 'why does my
 shell not stay in the project directory after I run this?'. That
 helper's logic should move to a function, or, more cleanly, the
 script should be retained for non-interactive callers (cron,
@@ -464,7 +464,7 @@ program.** A `.zshrc` function that calls `gitleaks`, `aws`,
 programs imply a real workflow, and real workflows belong in
 versioned files.
 
-# A categorisation matrix
+# A categorization matrix
 
 The matrix below sorts every helper a typical toolbox will contain
 into one of five fates. Triaging an existing toolbox is a
@@ -549,7 +549,7 @@ the file. The benefit is twofold: the helper now appears in
 `alias` output (so it is discoverable by listing aliases), and the
 toolbox shrinks by one file per promotion.
 
-## Phase 4: standardise the rest
+## Phase 4: standardize the rest
 
 The remaining scripts in `~/bin` are correctly scripts. They
 typically need light hardening:
@@ -569,7 +569,7 @@ typically need light hardening:
   script by name are updated together.
 
 This is the long-tail phase. It can be done one helper at a time,
-amortised over normal work.
+amortized over normal work.
 
 ## Phase 5 (optional): autoload remaining functions
 
@@ -611,7 +611,7 @@ preserves the removed code; the working tree should not.
 # Things to watch out for
 
 These pitfalls are easy to underestimate before starting and easy
-to recognise once seen.
+to recognize once seen.
 
 1. **Zsh-only constructs.** Many shell functions accumulate zsh
    conveniences that bash will not parse: `${(f)var}` for newline
@@ -635,7 +635,7 @@ to recognise once seen.
 4. **Working directory at invocation.** A function inherits the
    caller's `$PWD`. A script does too, but if the script was
    previously a function that called itself recursively or that
-   `cd`'d for its own purposes, that behaviour is now
+   `cd`'d for its own purposes, that behavior is now
    subprocess-local and may surprise the parent.
 
 5. **History and dirstack contamination.** A function that
@@ -681,7 +681,7 @@ long-term return on the refactor.
 
 # What did we learn?
 
-## Lessons learnt
+## Lessons Learned
 
 **Conceptual:**
 
@@ -717,7 +717,7 @@ long-term return on the refactor.
   renaming.
 - Functions that depend on shell-specific syntax cannot be
   blindly retitled with a bash shebang. Prefer the zsh shebang
-  unless the syntax has been explicitly portabilised.
+  unless the syntax has been explicitly made portable.
 
 ## Limitations
 
