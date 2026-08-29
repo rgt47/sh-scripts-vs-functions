@@ -125,11 +125,11 @@ which `library()` calls bind names.
 
 **Scope.** The region of code in which a given name is defined
 and accessible. Shell functions and scripts have distinct
-scopes by construction: a variable set inside a script is
+scopes by construction. A variable set inside a script is
 visible only within that script's process unless explicitly
-exported to children, while a variable set inside an
-interactive function (without `local`) is visible to the entire
-shell session. Scope is the language-level property that
+exported to children. A variable set inside an
+interactive function (without `local`), by contrast, is visible
+to the entire shell session. Scope is the language-level property that
 follows from process boundaries and namespace rules.
 
 **Testing.** Exercising code in a controlled environment with
@@ -211,9 +211,10 @@ runs the script and eventually exits.
 
 From the operating system's perspective the parent and child are
 two distinct processes. Each has its own process identifier
-(PID), its own address space (a private region of memory neither
-process can read from the other), its own working directory, its
-own copy of the environment, and its own file descriptor table.
+(PID) and its own address space, a private region of memory
+neither process can read from the other. Each also has its own
+working directory, its own copy of the environment, and its own
+file descriptor table.
 At the moment of `fork`, the child receives a snapshot of the
 parent's exported environment, the parent's open file descriptors
 (`stdin`, `stdout`, `stderr`), the command-line arguments passed
@@ -392,10 +393,11 @@ shell, which is roughly as defensible as testing R code by
 copy-pasting it into the console.
 
 **Reuse across hosts and contexts.** Scripts in `~/bin` are picked
-up by anything that respects `PATH`: cron, launchd, Make rules,
-Docker containers that mount the home directory, HPC submission
-scripts, scheduled GitHub Actions runners that source the
-toolbox. Functions are visible only to interactive zsh sessions.
+up by anything that respects `PATH`. That includes cron, launchd,
+Make rules, Docker containers that mount the home directory, HPC
+submission scripts, and scheduled GitHub Actions runners that
+source the toolbox. Functions, by contrast, are visible only to
+interactive zsh sessions.
 A research-backup helper hidden in `.zshrc` cannot be wired to a
 launchd job; the same logic in `~/bin` can be scheduled in
 seconds. This boundary maps almost exactly to the line between
