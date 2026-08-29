@@ -6,7 +6,7 @@ categories: [shell, shell-and-git]
 description: "Personal toolboxes accumulate helpers across years of small fixes: some end up as shell functions in '.zshrc', some as scripts in '~/bin', often with no consistent rule for which goes where. A principled split (function only when shell state must change, versioned script otherwise) removes hundreds of lines of logic from the average dotfile, makes every helper shellcheck-able, and reduces shell startup time."
 image: "media/images/hero.png"
 document-type: "blog"
-draft: true
+draft: false
 execute:
   echo: true
   warning: false
